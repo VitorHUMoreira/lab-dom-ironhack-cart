@@ -42,8 +42,8 @@ function createProduct() {
   ).value;
   const tbody = document.querySelector('tbody');
   let tr = document.createElement('tr');
-  tr.innerHTML = `<tr>
-  <td class="name">
+  tr.classList.add('product');
+  tr.innerHTML = `<td class="name">
     <span>${productNameValue}</span>
   </td>
   <td class="price">$<span>${unitPriceValue}</span></td>
@@ -53,9 +53,7 @@ function createProduct() {
   <td class="subtotal">$<span>0</span></td>
   <td class="action">
     <button class="btn btn-remove">Remove</button>
-  </td>
-</tr>`;
-  tr.classList.add('product');
+  </td>`;
   tbody.appendChild(tr);
 
   const removeBtn = document.querySelectorAll('.btn-remove');
